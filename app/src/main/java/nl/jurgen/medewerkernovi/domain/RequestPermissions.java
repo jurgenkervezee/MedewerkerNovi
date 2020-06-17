@@ -2,6 +2,7 @@ package nl.jurgen.medewerkernovi.domain;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.widget.Toast;
 
@@ -16,8 +17,9 @@ import androidx.core.content.ContextCompat;
 public class RequestPermissions {
 
     private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0;
+    //do I need to check camera permission
 
-    public boolean requestCameraPermission(Activity activity){
+    public boolean requestWriteExternalStoragePermission(Activity activity, Context applicationContext){
 
         if (ContextCompat.checkSelfPermission(activity,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -27,6 +29,10 @@ public class RequestPermissions {
             if (ActivityCompat.shouldShowRequestPermissionRationale(activity,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
+                Toast.makeText(applicationContext, "Testings", Toast.LENGTH_SHORT).show();
+                ActivityCompat.requestPermissions(activity,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
 
             } else {
 

@@ -106,6 +106,8 @@ import nl.jurgen.medewerkernovi.R;
         public void requestCameraPermission(){
             requestPermissions = new RequestPermissions();
 
-            cameraPermission = this.requestPermissions.requestCameraPermission(LandingActivity.this);
+//            cameraPermission = this.requestPermissions.requestCameraPermission(LandingActivity.this);
+            cameraPermission = this.requestPermissions.requestWriteExternalStoragePermission(LandingActivity.this, LandingActivity.this.getApplicationContext());
         }
+
     }
