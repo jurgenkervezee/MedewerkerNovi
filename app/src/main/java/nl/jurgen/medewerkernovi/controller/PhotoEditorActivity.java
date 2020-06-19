@@ -46,7 +46,7 @@ public class PhotoEditorActivity extends AppCompatActivity {
         imageEditView.setImageBitmap(imageBitmap);
 
         mStickerGadget = new StickerGadget();
-        mStickerGadget.setEditActivityStickers(PhotoEditorActivity.this);
+        mStickerGadget.setPhotoEditStickers(PhotoEditorActivity.this);
         setOnClickSaveListener();
         setOnClickEmployeeOfTheMonthListener();
 
@@ -89,7 +89,6 @@ public class PhotoEditorActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 mStickerGadget.addEmployeeOfTheMonthStickers(PhotoEditorActivity.this);
-
             }
         });
     }

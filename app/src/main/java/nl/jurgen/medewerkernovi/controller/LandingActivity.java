@@ -38,10 +38,10 @@ import nl.jurgen.medewerkernovi.R;
             setContentView(R.layout.activity_landing);
 
             requestCameraPermission();
-            createButons();
+            createButtons();
         }
 
-        private void createButons() {
+        private void createButtons() {
             this.menuCameraBtn = findViewById(R.id.gotoCameraBtn );
 
             menuCameraBtn.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +106,6 @@ import nl.jurgen.medewerkernovi.R;
         public void requestCameraPermission(){
             requestPermissions = new RequestPermissions();
 
-//            cameraPermission = this.requestPermissions.requestCameraPermission(LandingActivity.this);
             cameraPermission = this.requestPermissions.requestWriteExternalStoragePermission(LandingActivity.this, LandingActivity.this.getApplicationContext());
         }
 

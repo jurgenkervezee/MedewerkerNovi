@@ -17,13 +17,13 @@ import nl.jurgen.medewerkernovi.R;
 //Software Development Deel 1
 //Auteur: Jurgen Kervezee
 //Docent: Marco Dumont
-//Tested using  Nexus 5 API 22 Emulator
+//Tested using  Nexus 5 API 22 Emulator / also Pixel 2 XL API 22
 
 public class StickerGadget {
 
     private StickerView stickerView;
 
-    public void setEditActivityStickers(final Activity activity) {
+    public void setPhotoEditStickers(final Activity activity) {
 
         ImageView tophatImageView;
         ImageView balloonImageView;

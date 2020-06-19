@@ -18,11 +18,11 @@ import java.util.Date;
 
 public class Picture {
 
-    private String mPictureName;
     private File mGalleryDirectory;
     private File mImageDirectory;
-
     private File mPictureFile;
+
+    private String mPictureName;
     private Uri mPictureUri;
 
     public Picture(Activity activity) {
@@ -44,13 +44,14 @@ public class Picture {
     void createPictureFile() {
 
         try {
-            this.mPictureFile = File.createTempFile(
-                    this.mPictureName,
-                    ".jpg",
-                    this.mGalleryDirectory
+
+            this.mPictureFile = File.createTempFile(this.mPictureName,".jpg",this.mGalleryDirectory
+
             );
         } catch (IOException e) {
+
             e.printStackTrace();
+
         }
     }
 
@@ -58,7 +59,9 @@ public class Picture {
 
     public void fileToUri() {
         if (mPictureFile != null)
+
             this.mPictureUri = Uri.fromFile(this.mPictureFile);
+
     }
 
     public void bitmapToFile(Bitmap bitmap) {

@@ -21,9 +21,10 @@ public class getBitmapFromFile {
         public getBitmapFromFile(Activity activity){
 
             setCurrentActivity(activity);
+
         }
 
-        void setCurrentActivity(Activity currentActivity) {
+        private void setCurrentActivity(Activity currentActivity) {
             this.currentActivity = currentActivity;
         }
 

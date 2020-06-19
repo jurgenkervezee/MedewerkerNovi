@@ -14,8 +14,9 @@ import java.io.IOException;
 
 public class Camera {
 
-    private Gallery mGallery = new Gallery();
     private Picture mPicture;
+    private Gallery mGallery = new Gallery();
+
 
     private static final int TAKE_PICTURE = 1;
 

@@ -17,9 +17,9 @@ import androidx.core.content.ContextCompat;
 public class RequestPermissions {
 
     private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0;
-    //do I need to check camera permission
+    //do I need to check camera permission?
 
-    public boolean requestWriteExternalStoragePermission(Activity activity, Context applicationContext){
+    public boolean requestWriteExternalStoragePermission(Activity activity,  Context applicationContext){
 
         if (ContextCompat.checkSelfPermission(activity,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -29,7 +29,7 @@ public class RequestPermissions {
             if (ActivityCompat.shouldShowRequestPermissionRationale(activity,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                Toast.makeText(applicationContext, "Testings", Toast.LENGTH_SHORT).show();
+                Toast.makeText(applicationContext, "This application requires write permission to be able to store the images created", Toast.LENGTH_SHORT).show();
                 ActivityCompat.requestPermissions(activity,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
@@ -43,8 +43,5 @@ public class RequestPermissions {
         }
         return true;
     }
-
-
-
 }
 
