@@ -92,9 +92,5 @@ public class PhotoEditorActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-
 }
 

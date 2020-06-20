@@ -4,5 +4,5 @@
     <string name="menu_camera_button">Picture</string>
     <string name="menu_gallery_button">Gallery</string>
     <string name="menu_medewvdmnd_imageview">logo_novi</string>
-    <string name="share_button">Deel foto</string>
+    <string name="share_button">Share Picture</string>
 </resources>
